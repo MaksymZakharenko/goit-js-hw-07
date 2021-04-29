@@ -1,12 +1,4 @@
-let input = document.getElementById('name-input');
-let Output = document.getElementById('name-output');
+let input = document.getElementById("name-input");
+let output = document.getElementById("name-output");
 
-input.oninput = function () {
-    if (input.value === '') {
-       Output.innerHTML = 'незнакомец';
-    } else {
-    Output.innerHTML = input.value;
-    }
-}
-
-
+input.oninput = () => (output.textContent = input.value || "незнакомец");
